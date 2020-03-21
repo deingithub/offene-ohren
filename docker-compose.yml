@@ -1,0 +1,21 @@
+version: '2.0'
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    restart: always
+    networks:
+      - offeneOhren
+  db:
+    image: postgres:12.2-alpine
+    restart: always
+    networks:
+      - offeneOhren
+    environment:
+      - POSTGRES_USER=offeneOhren
+      - POSTGRES_PASSWORD=offeneOhren
+      - POSTGRES_DB=offeneOhren
+networks:
+  offeneOhren:
+    external: false
