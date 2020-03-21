@@ -1,4 +1,4 @@
-import { Entity, OneToOne, JoinColumn, PrimaryColumn, Column } from "typeorm";
+import { Entity, OneToOne, JoinColumn, Column } from "typeorm";
 import { User } from "./User";
 import { CWTopics } from "../index";
 

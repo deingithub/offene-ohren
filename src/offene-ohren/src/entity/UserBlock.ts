@@ -1,4 +1,4 @@
-import { Entity, OneToOne, JoinColumn, PrimaryColumn } from "typeorm";
+import { Entity, OneToOne, JoinColumn } from "typeorm";
 import { User } from "./User";
 
 // A user block prevents the blocked user from contacting the blocking user,
