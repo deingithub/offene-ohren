@@ -5,6 +5,7 @@ import { HelpSearchComponent } from './components/pages/help-search/help-search.
 
 
 const routes: Routes = [
+  {path: 'help-search', component: HelpSearchComponent},
   {path: '', component: StartPageComponent},
 ];
 
