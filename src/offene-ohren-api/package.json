@@ -1,0 +1,22 @@
+{
+  "name": "offene-ohren-api",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "npx tsc --build",
+    "start": "npx tsc --build && node ."
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "offene-ohren": "file:../offene-ohren"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/compression": "^1.7.0",
+    "@types/express": "^4.17.3",
+    "typescript": "^3.8.3"
+  }
+}
