@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Generated, Column, CreateDateColumn } from "typeorm";
 
 @Entity()
 export class User {
@@ -24,4 +24,8 @@ export class User {
 
     @CreateDateColumn()
     createdAt: Date;
+
+    @Generated("uuid")
+    @Column()
+    apiToken: string;
 }

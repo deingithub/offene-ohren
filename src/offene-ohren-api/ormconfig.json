@@ -1,0 +1,21 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "offeneohren",
+    "password": "offeneohren",
+    "database": "offeneohren",
+    "synchronize": true,
+    "logging": false,
+    "entities": [
+        "node_modules/offene-ohren/build/entity/*.js"
+    ],
+    "migrations": [
+        "node_modules/offene-ohren/build/migration/**/*.js"
+    ],
+    "cli": {
+        "entitiesDir": "src/entity",
+        "migrationsDir": "src/migration",
+        "subscribersDir": "src/subscriber"
+    }
+}
