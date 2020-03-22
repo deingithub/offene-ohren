@@ -1,4 +1,4 @@
-import { Entity, OneToOne, JoinColumn, Column } from "typeorm";
+import { Entity, JoinColumn, Column, ManyToOne, OneToOne, CreateDateColumn } from "typeorm";
 import { User } from "./User";
 import { Helper } from "./Helper";
 import { CWTopics } from "../index";
@@ -16,7 +16,10 @@ export class QueuedTalk {
     @Column()
     severity: Number;
 
-    @OneToOne(type => Helper, { primary: true, nullable: true })
+    @CreateDateColumn()
+    createdAt: Date;
+
+    @ManyToOne(type => Helper, { nullable: true })
     @JoinColumn()
     acceptedBy: Helper;
 }

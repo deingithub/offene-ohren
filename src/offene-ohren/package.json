@@ -1,11 +1,12 @@
 {
    "name": "offene-ohren",
    "version": "1.0.0",
-   "main": "dist/index.js",
+   "main": "build/index.js",
    "license": "MIT",
    "files": [
       "dist/**/*"
    ],
+   "types": "build/index.d.ts",
    "scripts": {
       "build": "npx tsc --build"
    },

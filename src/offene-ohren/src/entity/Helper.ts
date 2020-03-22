@@ -15,6 +15,6 @@ export class Helper {
     @Column("simple-array")
     filters: CWTopics[];
 
-    @Column()
+    @Column({ default: false })
     isInCall: boolean;
 }
