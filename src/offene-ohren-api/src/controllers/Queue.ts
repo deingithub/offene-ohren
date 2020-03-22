@@ -10,6 +10,7 @@ export class Queue extends Controller {
         super(app, "/queue")
     }
 
+    // Get oldest filtered queue entries, requires token and Helper Data
     async Get(request: Request, response: Response): Promise<void> {
         const me = await GetAuthenticatedUser(request).catch(() => {
             response.status(401);
@@ -35,6 +36,7 @@ export class Queue extends Controller {
         response.json({ status: "success", data: res })
     }
 
+    // Create/Update queued help request, params {cws, severity}, requires token
     async Post(request: Request, response: Response): Promise<void> {
         const me = await GetAuthenticatedUser(request).catch(() => {
             response.status(401);
@@ -58,6 +60,8 @@ export class Queue extends Controller {
         throw new Error("Method not implemented.")
     }
 
+
+    // Delete own help request, requires token
     async Delete(request: Request, response: Response): Promise<void> {
         const me = await GetAuthenticatedUser(request).catch(() => {
             response.status(401);

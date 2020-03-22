@@ -5,11 +5,17 @@ export class User {
     @PrimaryGeneratedColumn()
     uid: Number;
 
-    @Column()
+    @Column({ unique: true })
     email: string;
 
     @Column()
     password: string;
+
+    @Column({ default: 10_000 })
+    iterations: number;
+
+    @Column()
+    salt: string;
 
     @Column()
     nick: string;
@@ -25,7 +31,6 @@ export class User {
     @CreateDateColumn()
     createdAt: Date;
 
-    @Generated("uuid")
     @Column()
     apiToken: string;
 }
